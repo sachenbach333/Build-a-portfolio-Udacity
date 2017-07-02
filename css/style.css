@@ -10,6 +10,70 @@
     box-sizing: border-box;
 }
 
+.container {
+    margin: auto;
+    max-width: 1024px;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4 {
+    width: 33.33%;
+    text-align: center;
+}
+
+
+.col-6 {
+    width: 50%;
+}
+
+.logo {
+    /*Udacity logo from Creative commons on June 28th, 2017 at 
+    https://commons.wikimedia.org/wiki/File%3AUdacity_logo.png  */
+    background: url(../images/udacitylogo.png);
+    background-repeat: no-repeat;
+    float: left;
+    margin-top: 0px;
+}
+
+.headertitle  {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 0%;
+    flex-flow: row;
+    flex-wrap: nowrap;
+}
+
+.main  {
+    display: block;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 0%;
+}
+
+.featured {
+    text-align: left;
+    margin-left: 0%;
+    margin-top: 1%;
+    color: #7d97ad;
+    font-size: 1.3em;
+    margin-bottom: 0%;
+}
+
+.projectimage {
+    width: 100%;
+    margin-bottom: 10%;
+    color: #2d3c49;
+    margin-right: 0px;
+}
+
 h1, h2, h5 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -48,7 +112,8 @@ hr {
 
 a  {
     text-align: center;
-    font-size: .8em;
+    font-size: 1em;
+    text-decoration: none;
     color: rgb(17, 48, 121);
 }
 
@@ -58,109 +123,86 @@ img {
     width: 100%;
 }
 
-.container {
-    margin: auto;
-    max-width: 1024px;
-    width: 100%;
-}
-
-.row {
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col-4 {
-    width: 33.33%;
-    text-align: center;
-}
-
-
-.col-6 {
-    width: 50%;
-}
-
-.logo {
-    /*Udacity logo from Creative commons on June 28th, 2017 at 
-    https://commons.wikimedia.org/wiki/File%3AUdacity_logo.png  */
-    background: url(../images/udacitylogo.png);
-    background-repeat: no-repeat;
-    float: left;
-    margin-top: 0px;
-}
-
-.header__text  {
-    float: right;
-    margin: 0px;
-    padding: 0px;
-    margin-left: 0%;
-}
-
-.main  {
-    display: block;
-    margin-right: auto;
-    margin-top: 3%;
-    margin-bottom: 0%;
-}
-
-.featured {
-    text-align: left;
-    margin-left: 0%;
-    margin-top: 1%;
-    color: #7d97ad;
-    font-size: 1.3em;
-    margin-bottom: 0%;
-}
-
-.work-item {
-    width: 100%;
-    margin-bottom: 10%;
-    color: #2d3c49;
-    margin-right: 0px;
-}
 
 @media screen and (max-width: 600px) {
+
     body {
-        font-size: 1.2em;
+        font-size: 1em;
     }
-   .header_text {
+    .col-6 {
+        line-height: 80px;
+    }
+
+   .headertitle {
     float: right;
    }
+
    h1 {
-    font-size: 1.4em;
-    padding-top: 3%;
+    font-size: 2em;
+    padding-top: 3.5%;
    }
+
    h5 {
     font-size: .8em;
    }
-   .row {
-    min-height: 85px;
-   }
+  
 }
+
 
 @media screen and (min-width: 601px) {
     body {
         font-size: 1.3em;
     }
-    .work-item {
-        width: 50%;
-        padding: 1%;
+    .header {
+        flex-wrap: nowrap;
     }
-    h1, h5 {
-    float: right;
-    }
+
     .row {
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: space-between;
-        margin-top: 0px;
+        margin-top: 0px; 
+    }
+
+    .projectimage {
+        width: 50%;
+        padding: 1%;
+        flex-wrap: wrap;
+    }
+     h1, h5 {
+    float: right;
     }
 
 }
 
-@media screen and (min-width:1024px) {
-    
+
+@media screen and (min-width: 840px) {
+    body {
+        font-size: 1.3em;
+    }
+
+    .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 0px; 
+    }
+
+    .projectimage {
+        width: 50%;
+        padding: 1%;
+    }
+     h1, h5 {
+        float: right;
+
+    }
+    a {
+        font-size: .5em;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+
     .row {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -172,11 +214,11 @@ img {
     .featured h2 {
         margin-left: 3%;
     }
-    .work-item {
+    .projectimage {
         width: 33.3%;
         margin: 1%;
     }
-    .work-item img {
-        width: 100%;
+    a {
+        font-size: .8em;
     }
 }

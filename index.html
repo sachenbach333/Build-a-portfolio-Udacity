@@ -12,34 +12,40 @@
 <body>
     <main>
         <div class="container">
+         <!-- This is the header with logo, name and title description-->
             <div class="header">
                 <div class="row">
+               <!--Udacity logo is set as background in stylesheet and takes half column and alligns to right-->
                     <div class="col-6 logo"></div>
-                    <div class="header__text">
+                    <div class="headertitle">
+                    <!--This is name and title; takes half column and aligns to left-->	
                         <h1>JANE DOETTE</h1>
                         <h5><b>FRONT-END NINJA</b></h5>
                     </div>
                 </div>
-                <hr/>
-
             </div>
+            <hr/>
             <div class="main">
-                <img src="images/textimage.png" srcset="images/textimage2x.png 2x" alt="TEXT IMAGE" />
+            	<!--image set as placeholder for future portfolio work/text-->
+                <img src="images/textimage.png" srcset="images/textimage2x.png 2x" alt="TEXT IMAGE"/>
             </div>
              <div class="featured row">
                   <h2>Featured Work</h2>
              </div>
                 <div class="row">
-                    <div class="work-item col-4">
+                <!--Three images representing project icons - take up third of column but wrap as screen gets smaller-->
+                    <div class="projectimage col-4">
                       <img src="images/appimage.png" srcset="images/appimage_2x.jpg 2x , images/appimage_3x.jpg 3x " alt="APP IMAGE"/>
-                        <h2>APPIFY</h2><a href="#">https://github.com/udacity/Appify/</a>
+                        <h2>APPIFY</h2>
+                        <!--Link to projects-TODO make links active as projects complete-->
+                        <a href="#">https://github.com/udacity/Appify/</a>
                      </div>
-                    <div class="work-item col-4">
+                    <div class="projectimage col-4">
                         <img src="images/sunflower.png" srcset="images/sunflower_2x.png 2x , images/sunflower_3x.png 3x"  alt="Sunflower"/>
                         <h2>SUNFLOWER</h2>
                         <a href="#">https://github.com/udacity/Sunflower/</a>
                     </div>
-                    <div class="work-item col-4">
+                    <div class="projectimage col-4">
                         <img src="images/sparkle.png" srcset="images/sparkle_2x.png 2x , images/sunflower_3x.png 3x" alt="Sparkle of water on trees" />
                         <h2>BOKEH</h2>
                         <a href="#">https://github.com/udacity/Bokeh/</a>
@@ -47,5 +53,6 @@
             </div>
          </div>
     </main>
+    <footer><!--Reserved space for footer info--></footer>
 </body>
 </html>
